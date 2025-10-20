@@ -1,6 +1,6 @@
 # Visualizacion del codigo del Raspberry
 
-```
+```python
 import time
 import random
 import paho.mqtt.client as mqtt
