@@ -1,5 +1,4 @@
-# C02-sensor
-CO₂ en aulas escolares para ventilación inteligente
+# CO₂ en aulas escolares para ventilación inteligente
 
 Nombre: Ernesto Torres Pineda 
 
