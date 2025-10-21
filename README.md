@@ -31,8 +31,6 @@ Además, se implementa un mecanismo de **control de ventilación** que permite a
 3. **Recepción:** Python (Subscriber) → InfluxDB
 4. **Visualización:** Grafana Dashboard
 
----
-Perfecto. A continuación te dejo los **pasos claros y secuenciales** para poner en marcha los **scripts del Raspberry Pi y AWS (o PC con InfluxDB/Grafana)**, asumiendo que ya tienes instalados Mosquitto, InfluxDB, Grafana, Python, y Tailscale en ambos equipos.
 
 ---
 
@@ -51,7 +49,22 @@ Perfecto. A continuación te dejo los **pasos claros y secuenciales** para poner
    * En el script, define la IP Tailscale del servidor o PC como `BROKER`.
    * Usa el puerto `1883` y un topic como `lab/sensors`.
 
-3. **Ejecutar el script:**
+   Para configurar el puerto se ejecuta el siguiente comando dentro del raspberry 
+   
+   ```bash
+   sudo nano /etc/mosquitto/mosquitto.conf
+   ```
+    Dentro del archivo de configuracion se agregan las siguientes lineas
+  
+    ```bash
+    listener 1883 0.0.0.0
+    allow_anonymous true
+    ```
+
+    <img width="1055" height="594" alt="image" src="https://github.com/user-attachments/assets/9a3ded56-8c5e-4952-a3e7-dc8de7767115" />
+
+    
+4. **Ejecutar el script:**
 
    ```bash
    python3 co2_publisher.py
