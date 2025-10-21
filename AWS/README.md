@@ -7,14 +7,14 @@ from influxdb_client import InfluxDBClient, Point, WritePrecision
 from paho.mqtt import client as mqtt_client
 
 # -------- Configuración MQTT --------
-BROKER = "100.91.71.85"   # IP Tailscale del Raspberry Pi (donde corre Mosquitto)
+BROKER = "100.90.5.22"   # IP Tailscale del Raspberry Pi (donde corre Mosquitto)
 PORT = 1883
 TOPIC = "classroom/co2"
 
 # -------- Configuración InfluxDB --------
 INFLUX_URL = "http://localhost:8086"  # Si InfluxDB corre localmente en AWS
 TOKEN = "6w2VFxZwXybrGSptgZ2RPB4MkNRlQ8_Yibn__ryg4Rb9fPYyK-K6lkt5VRd3iHhqzqcvlZyCfjnOMlL0xJR_dA=="
-ORG = "escuela"
+ORG = "iot-lab"
 BUCKET = "aulas"
 
 # -------- Conexión a InfluxDB --------
