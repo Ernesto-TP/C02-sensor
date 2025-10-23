@@ -25,7 +25,7 @@ Además, se implementa un mecanismo de **control de ventilación** que permite a
 
 ## Flujo de Datos
 
-1. **Captura:** Sensor de CO₂ → Raspberry Pi
+1. **Captura:** Sensor de CO₂ (simulación) → Raspberry Pi
 2. **Publicación:** Python (Publisher) → MQTT Broker
 3. **Recepción:** Python (Subscriber) → InfluxDB
 4. **Visualización:** Grafana Dashboard
